@@ -1,0 +1,10 @@
+gradio
+pillow
+matplotlib
+numpy
+requests
+transformers @ git+https://github.com/huggingface/transformers@ccf2ca162e33f381e454cdb74bf4b41a51ab976d
+torch==2.6.0
+torchvision==0.21.0
+peft==0.15.2
+accelerate==1.4.0
