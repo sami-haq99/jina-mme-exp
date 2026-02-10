@@ -131,6 +131,7 @@ class JinaV4SimilarityMapper:
             patch_size: Size of image patches for embedding.
             heatmap_alpha: Transparency for the similarity heatmap.
         """
+        self.task = task
         self.model_name = model_name
         self.device = device
         self.logger = logging.getLogger("JinaV4SimMapper")
