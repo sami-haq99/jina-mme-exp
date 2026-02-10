@@ -1,0 +1,8 @@
+
+    image_source = "cyclists.jpg" 
+    text_query = ["A group of cats walking nearby the ocean", "A group of cats walking nearby the ocean"]
+
+    mapper = JinaV4SimilarityMapper(task = 'retrieval') 
+    results = mapper.calculate_multimodal_consistency(text_query[0], text_query[1], image_source)
+{'Final_Compound_Score': 0.9137, 'Text_Fidelity (T1-T2)': 1.0, 'Visual_Grounding (T2-Img)': 0.4166, 'Image_Relevance (T1-Img)': 0.4166, 'Fusion_Weight': 0.1735}
+
