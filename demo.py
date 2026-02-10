@@ -56,7 +56,7 @@ def main():
     # 2. Define Inputs
     # You can use a local file path or a URL
     image_source = "cyclists.jpg" 
-    text_query = ["A group of cats walking nearby the ocean", "A group of cyclists riding nearby the ocean"]
+    text_query = ["A group of cats walking nearby the ocean", "A group of cats walking nearby the ocean"]
 
     mapper = JinaV4SimilarityMapper(task = 'retrieval') 
     results = mapper.calculate_multimodal_consistency(text_query[0], text_query[1], image_source)
