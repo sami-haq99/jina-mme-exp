@@ -15,7 +15,8 @@ def main():
     # Note: For "web" mode, you might need to set an API key in the JinaEmbeddingsClient class or passing it if modified.
     # The provided code has "Bearer Not Set" by default.
     #task = [retrieval, text-matching]
-    mapper = JinaV4SimilarityMapper(task="text-matching")  # or "local" if you have the model
+    task = ["text-matching"]
+    mapper = JinaV4SimilarityMapper(task=task)  # or "local" if you have the model
 
     # 2. Define Inputs
     # You can use a local file path or a URL
@@ -23,7 +24,7 @@ def main():
     text_query = "A group of cats walking nearby the ocean"
     #img_proc, *_ = mapper.process_image(image_source)    
     # Create output directory
-    output_dir = "heatmap_results"
+    output_dir = f"heatmap_results_{task}"
     os.makedirs(output_dir, exist_ok=True)
 
     print(f"Processing query: '{text_query}'")
@@ -37,6 +38,11 @@ def main():
         )
 
         # 4. Save Results
+        
+        #save g_score in a text file
+        with open(os.path.join(output_dir, f"g_{task}_score.txt"), "w") as f:
+            f.write(str(g_score))
+
         print(f"\nFound {len(tokens)} valid tokens_score.", g_score)
         for token in tokens:
             if token in heatmaps:
