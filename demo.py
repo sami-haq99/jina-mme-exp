@@ -15,13 +15,13 @@ def main():
     # Note: For "web" mode, you might need to set an API key in the JinaEmbeddingsClient class or passing it if modified.
     # The provided code has "Bearer Not Set" by default.
     #task = [retrieval, text-matching]
-    task = 'retrieval'
+    task = 'text-matching'
     mapper = JinaV4SimilarityMapper(task=task)  # or "local" if you have the model
 
     # 2. Define Inputs
     # You can use a local file path or a URL
-    image_source = "https://cdn.duvine.com/wp-content/uploads/2016/04/17095703/Slides_mallorca_FOR-WEB.jpg" 
-    text_query = "A group of cats walking nearby the ocean"
+    image_source = "cyclists.jpg" 
+    text_query = "A group of cyclists riding nearby the ocean"
     #img_proc, *_ = mapper.process_image(image_source)    
     # Create output directory
     output_dir = f"heatmap_results_{task}"
