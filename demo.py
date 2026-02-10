@@ -8,24 +8,8 @@ def save_base64_image(base64_str, output_path):
         f.write(base64.b64decode(base64_str))
     print(f"Saved: {output_path}")
 
-def main():
-    # 1. Initialize the Mapper
-    # Use client_type="web" if you don't have the model locally and want to use the API class provided
-    # Use client_type="local" if you have the model weights and want to run it on GPU
-    # Note: For "web" mode, you might need to set an API key in the JinaEmbeddingsClient class or passing it if modified.
-    # The provided code has "Bearer Not Set" by default.
-    #task = [retrieval, text-matching]
-    task = ['text-matching', 'retrieval']
-     # or "local" if you have the model
-
-    # 2. Define Inputs
-    # You can use a local file path or a URL
-    image_source = "cyclists.jpg" 
-    text_query = ["A group of cats walking nearby the ocean", "A group of cyclists riding nearby the ocean"]
-    #img_proc, *_ = mapper.process_image(image_source)    
-    # Create output directory
-
-
+def visual_grounding_heatmaps(text_query, image_source, task):
+    
     print(f"Processing query: '{text_query}'")
     print("Generating heatmaps...")
     for t in task:
@@ -60,6 +44,25 @@ def main():
 
             except Exception as e:
                 print(f"An error occurred: {e}")
+
+def main():
+    # 1. Initialize the Mapper
+    # Use client_type="web" if you don't have the model locally and want to use the API class provided
+    # Use client_type="local" if you have the model weights and want to run it on GPU
+    # Note: For "web" mode, you might need to set an API key in the JinaEmbeddingsClient class or passing it if modified.
+    # The provided code has "Bearer Not Set" by default.
+    #task = [retrieval, text-matching]
+
+    # 2. Define Inputs
+    # You can use a local file path or a URL
+    image_source = "cyclists.jpg" 
+    text_query = ["A group of cats walking nearby the ocean", "A group of cyclists riding nearby the ocean"]
+
+    mapper = JinaV4SimilarityMapper(task = 'retrieval') 
+    results = mapper.calculate_multimodal_consistency(text_query[0], text_query[1], image_source)
+
+    print("Multimodal Consistency Results:")
+    print(results)
 
 if __name__ == "__main__":
     main()

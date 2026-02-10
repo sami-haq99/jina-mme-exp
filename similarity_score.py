@@ -302,6 +302,74 @@ class JinaV4SimilarityMapper:
         pil_image = pil_image.resize((IMG_SIZE, new_height), Image.Resampling.LANCZOS)
         return pil_image
 
+    def compute_text_text_similarity(
+        self,
+        text1_embeddings: torch.Tensor,
+        text2_embeddings: torch.Tensor
+    ) -> float:
+        """
+        Computes Late Interaction (MaxSim) similarity between two texts.
+        """
+        # 1. Normalize both sets of vectors
+        t1_norm = torch.nn.functional.normalize(text1_embeddings, p=2, dim=1)
+        t2_norm = torch.nn.functional.normalize(text2_embeddings, p=2, dim=1)
+        
+        # 2. Compute Interaction Matrix [num_tokens_1, num_tokens_2]
+        # This shows how every word in T1 relates to every word in T2
+        sim_matrix = torch.matmul(t1_norm, t2_norm.T)
+        
+        # 3. MaxSim: For every token in T1, find the best match in T2
+        # Then average those best scores.
+        max_scores_1_to_2 = sim_matrix.max(dim=1).values
+        score = max_scores_1_to_2.mean().item()
+        
+        return score
+    
+    def calculate_multimodal_consistency(
+        self,
+        text1: str, # Source
+        text2: str, # Target/Candidate
+        image: Union[str, bytes, Image.Image]
+    ) -> Dict[str, float]:
+        
+        # 1. Fetch all Embeddings
+        _, emb_t1, _ = self.process_query(text1)
+        _, emb_t2, _ = self.process_query(text2)
+        _, emb_img, _, _ = self.process_image(image)
+        
+        # 2. Compute The Triangle Edges (Raw Scores)
+        
+        # A. Text1 (Source) <-> Text2 (Target)
+        score_t1_t2 = self.compute_text_text_similarity(emb_t1, emb_t2)
+        
+        # B. Text2 (Target) <-> Image
+        # We assume image patches are the "document" (dim 1)
+        t2_norm = torch.nn.functional.normalize(emb_t2, p=2, dim=1)
+        img_norm = torch.nn.functional.normalize(emb_img, p=2, dim=1)
+        sim_matrix_t2_img = torch.matmul(t2_norm, img_norm.T)
+        score_t2_img = sim_matrix_t2_img.max(dim=1).values.mean().item()
+        
+        # C. Text1 (Source) <-> Image (The Baseline/Relevance)
+        t1_norm = torch.nn.functional.normalize(emb_t1, p=2, dim=1)
+        sim_matrix_t1_img = torch.matmul(t1_norm, img_norm.T)
+        score_t1_img = sim_matrix_t1_img.max(dim=1).values.mean().item()
+        
+        # 3. Apply Relevance-Weighted Fusion (Academic Standard)
+        # Weight lambda acts as a gate. 
+        # If Source doesn't match Image (score_t1_img is low), lambda -> 0.
+        # This prevents the visual part from ruining the score on bad images.
+        k = 2 # Sensitivity
+        lambda_weight = max(0, score_t1_img) ** k 
+        
+        final_score = (score_t1_t2 + (lambda_weight * score_t2_img)) / (1 + lambda_weight)
+        
+        return {
+            "Final_Compound_Score": round(final_score, 4),
+            "Text_Fidelity (T1-T2)": round(score_t1_t2, 4),
+            "Visual_Grounding (T2-Img)": round(score_t2_img, 4),
+            "Image_Relevance (T1-Img)": round(score_t1_img, 4),
+            "Fusion_Weight": round(lambda_weight, 4)
+        }
     def compute_similarity_map(
         self,
         token_embedding: torch.Tensor,
