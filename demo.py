@@ -15,7 +15,7 @@ def main():
     # Note: For "web" mode, you might need to set an API key in the JinaEmbeddingsClient class or passing it if modified.
     # The provided code has "Bearer Not Set" by default.
     #task = [retrieval, text-matching]
-    task = ["text-matching"]
+    task = 'text-matching'
     mapper = JinaV4SimilarityMapper(task=task)  # or "local" if you have the model
 
     # 2. Define Inputs
