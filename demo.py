@@ -15,49 +15,51 @@ def main():
     # Note: For "web" mode, you might need to set an API key in the JinaEmbeddingsClient class or passing it if modified.
     # The provided code has "Bearer Not Set" by default.
     #task = [retrieval, text-matching]
-    task = 'text-matching'
-    mapper = JinaV4SimilarityMapper(task=task)  # or "local" if you have the model
+    task = ['text-matching', 'retrieval']
+     # or "local" if you have the model
 
     # 2. Define Inputs
     # You can use a local file path or a URL
     image_source = "cyclists.jpg" 
-    text_query = "A group of cyclists riding nearby the ocean"
+    text_query = ["A group of cats walking nearby the ocean", "A group of cyclists riding nearby the ocean"]
     #img_proc, *_ = mapper.process_image(image_source)    
     # Create output directory
-    output_dir = f"heatmap_results_{task}"
-    os.makedirs(output_dir, exist_ok=True)
+
 
     print(f"Processing query: '{text_query}'")
     print("Generating heatmaps...")
+    for t in task:
+        for i in range(len(text_query)):
+            # 3. Generate Heatmaps
+            try:
+                mapper = JinaV4SimilarityMapper(task=t) 
+                tokens, heatmaps, g_score = mapper.get_token_similarity_maps(
+                    query=text_query[i],
+                    image=image_source
+                )
 
-    # 3. Generate Heatmaps
-    try:
-        tokens, heatmaps, g_score = mapper.get_token_similarity_maps(
-            query=text_query,
-            image=image_source
-        )
+                # 4. Save Results
+                output_dir = f"heatmap_results_{i}_{t}"
+                os.makedirs(output_dir, exist_ok=True)
+                #save g_score in a text file
+                with open(os.path.join(output_dir, f"g_{t}_{i}_score.txt"), "w") as f:
+                    f.write(str(g_score))
 
-        # 4. Save Results
-        
-        #save g_score in a text file
-        with open(os.path.join(output_dir, f"g_{task}_score.txt"), "w") as f:
-            f.write(str(g_score))
+                print(f"\nFound {len(tokens)} valid tokens_score.", g_score)
+                for token in tokens:
+                    if token in heatmaps:
+                        # Create a safe filename for the token
+                        safe_token_name = "".join([c if c.isalnum() else "_" for c in token])
+                        filename = f"heatmap_{safe_token_name}.png"
+                        output_path = os.path.join(output_dir, filename)
+                        
+                        # Decode and save
+                        save_base64_image(heatmaps[token], output_path)
 
-        print(f"\nFound {len(tokens)} valid tokens_score.", g_score)
-        for token in tokens:
-            if token in heatmaps:
-                # Create a safe filename for the token
-                safe_token_name = "".join([c if c.isalnum() else "_" for c in token])
-                filename = f"heatmap_{safe_token_name}.png"
-                output_path = os.path.join(output_dir, filename)
-                
-                # Decode and save
-                save_base64_image(heatmaps[token], output_path)
+                print("\nAll heatmaps saved successfully!")
 
-        print("\nAll heatmaps saved successfully!")
-
-    except Exception as e:
-        print(f"An error occurred: {e}")
+            except Exception as e:
+                print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     main()
