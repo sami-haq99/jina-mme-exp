@@ -327,47 +327,47 @@ class JinaV4SimilarityMapper:
     
     def calculate_multimodal_consistency(
         self,
-        text1: str, # Source
-        text2: str, # Target/Candidate
+        source: str, # Source
+        candidate: str, # Target/Candidate
         image: Union[str, bytes, Image.Image]
     ) -> Dict[str, float]:
         
         # 1. Fetch all Embeddings
-        _, emb_t1, _ = self.process_query(text1)
-        _, emb_t2, _ = self.process_query(text2)
+        _, emb_src, _ = self.process_query(source)
+        _, emb_tgt, _ = self.process_query(candidate)
         _, emb_img, _, _ = self.process_image(image)
         
         # 2. Compute The Triangle Edges (Raw Scores)
         
         # A. Text1 (Source) <-> Text2 (Target)
-        score_t1_t2 = self.compute_text_text_similarity(emb_t1, emb_t2)
-        
+        score_src_tgt = self.compute_text_text_similarity(emb_src, emb_tgt)
+
         # B. Text2 (Target) <-> Image
         # We assume image patches are the "document" (dim 1)
-        t2_norm = torch.nn.functional.normalize(emb_t2, p=2, dim=1)
+        tgt_norm = torch.nn.functional.normalize(emb_tgt, p=2, dim=1)
         img_norm = torch.nn.functional.normalize(emb_img, p=2, dim=1)
-        sim_matrix_t2_img = torch.matmul(t2_norm, img_norm.T)
-        score_t2_img = sim_matrix_t2_img.max(dim=1).values.mean().item()
-        
+        sim_matrix_tgt_img = torch.matmul(tgt_norm, img_norm.T)
+        score_tgt_img = sim_matrix_tgt_img.max(dim=1).values.mean().item()
+
         # C. Text1 (Source) <-> Image (The Baseline/Relevance)
-        t1_norm = torch.nn.functional.normalize(emb_t1, p=2, dim=1)
-        sim_matrix_t1_img = torch.matmul(t1_norm, img_norm.T)
-        score_t1_img = sim_matrix_t1_img.max(dim=1).values.mean().item()
-        
+        src_norm = torch.nn.functional.normalize(emb_src, p=2, dim=1)
+        sim_matrix_src_img = torch.matmul(src_norm, img_norm.T)
+        score_src_img = sim_matrix_src_img.max(dim=1).values.mean().item()
+
         # 3. Apply Relevance-Weighted Fusion (Academic Standard)
         # Weight lambda acts as a gate. 
         # If Source doesn't match Image (score_t1_img is low), lambda -> 0.
         # This prevents the visual part from ruining the score on bad images.
         k = 2 # Sensitivity
-        lambda_weight = max(0, score_t1_img) ** k 
-        
-        final_score = (score_t1_t2 + (lambda_weight * score_t2_img)) / (1 + lambda_weight)
-        
+        lambda_weight = max(0, score_src_img) ** k
+
+        final_score = (score_src_tgt + (lambda_weight * score_tgt_img)) / (1 + lambda_weight)
+
         return {
             "Final_Compound_Score": round(final_score, 4),
-            "Text_Fidelity (T1-T2)": round(score_t1_t2, 4),
-            "Visual_Grounding (T2-Img)": round(score_t2_img, 4),
-            "Image_Relevance (T1-Img)": round(score_t1_img, 4),
+            "Text_Fidelity (T1-T2)": round(score_src_tgt, 4),
+            "Visual_Grounding (T2-Img)": round(score_tgt_img, 4),
+            "Image_Relevance (T1-Img)": round(score_src_img, 4),
             "Fusion_Weight": round(lambda_weight, 4)
         }
     def compute_similarity_map(
