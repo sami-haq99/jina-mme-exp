@@ -138,20 +138,32 @@ if __name__ == "__main__":
     
     # 1. Setup Data (Example)
     # In real usage, load these from a file
-    sources = ["A cat", "A dog"] * 50 # 100 samples
-    candidates = ["Eine Katze", "Ein Hund"] * 50
-    images = ["cat.png", "cat_dog.png"] * 50 # Ensure these files exist locally!
-    
+    sources = ["We'll have to get rid of that mole.", "He finally made it to the bank."] * 10 # 100 samples
+    candidates = ["Wir müssen uns von diesem Maulwurf trennen.", "Er kam endlich an der Bank an."] * 10
+    images = [ "mole.jpeg", "bank.jpeg"] * 10 # Ensure these files exist locally!
+
     # 2. Init Scorer
-    scorer = CorpusScorer(client_type="local", device="cuda", task="text-matching")
-    
+    scorer = CorpusScorer(client_type="local", device="cuda", task="retrieval")
+
     # 3. Calculate
     # batch_size=8 is usually safe for 12GB VRAM with Jina-v4
     df = scorer.calculate_individual_scores(sources, candidates, images, batch_size=8)
     
     # 4. Preview
     print(df.head())
+    
+    mapper = JinaV4SimilarityMapper(task = 'retrieval') 
+    results = mapper.calculate_multimodal_consistency(sources[0], candidates[0], images[0])
+    #example result values:
 
+    
+    print("Multimodal Consistency Results:")
+    print(results)
+
+    results = mapper.calculate_multimodal_consistency(sources[1], candidates[1], images[1])
+
+    print("Multimodal Consistency Results:")
+    print(results)
 
     # src_lang = 'en'
     # tgt_lang = 'de'
