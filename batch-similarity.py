@@ -26,7 +26,7 @@ class JinaV4SimilarityMapper:
     Unified Mapper for Single-Sample and Corpus-Batch Evaluation.
     """
 
-    def __init__(self, client_type: str = "web", task: str = "text-matching", device: str = "cpu"):
+    def __init__(self, client_type: str = "local", task: str = "text-matching", device: str = "cpu"):
         self.client_type = client_type
         self.device = device
         self.task = task
