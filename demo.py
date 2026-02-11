@@ -60,7 +60,9 @@ def main():
 
     mapper = JinaV4SimilarityMapper(task = 'retrieval') 
     results = mapper.calculate_multimodal_consistency(text_query[0], text_query[1], image_source)
+    #example result values:
 
+    
     print("Multimodal Consistency Results:")
     print(results)
 

@@ -363,18 +363,14 @@ class JinaV4SimilarityMapper:
         k = 2 # Sensitivity
         lambda_weight = max(0, score_src_img) ** k
 
-        final_score_noise = (score_src_tgt + (lambda_weight * score_tgt_img)) / (1 + lambda_weight)
-
-        final_score_wo_noise = (score_src_tgt + (lambda_weight * score_tgt_img)) / 2
+        final_score = (score_src_tgt + (lambda_weight * score_tgt_img)) / (1 + lambda_weight)
         
         mmss = 2 * (score_src_tgt * score_tgt_img) / (score_src_tgt + score_tgt_img + 1e-9)
         return {
-            "MMSS": round(mmss, 4),
-            "Final_Compound_Score": round(final_score_wo_noise, 4),
-            "Final_Compound_Score (Noise)": round(final_score_noise, 4),
-            "Text_Fidelity (T1-T2)": round(score_src_tgt, 4),
-            "Visual_Grounding (T2-Img)": round(score_tgt_img, 4),
-            "Image_Relevance (T1-Img)": round(score_src_img, 4),
+            "Final_Score": round(final_score, 4),
+            "Text_Fidelity (Src-Tgt)": round(score_src_tgt, 4),
+            "Visual_Grounding (Tgt-Img)": round(score_tgt_img, 4),
+            "Image_Relevance (Src-Img)": round(score_src_img, 4),
             "Fusion_Weight": round(lambda_weight, 4)
         }
     def compute_similarity_map(
