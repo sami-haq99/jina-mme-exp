@@ -142,16 +142,7 @@ if __name__ == "__main__":
     candidates = ["Wir müssen uns von diesem Maulwurf trennen.", "Er kam endlich an der Bank an."] * 10
     images = [ "mole.jpeg", "bank.jpeg"] * 10 # Ensure these files exist locally!
 
-    # 2. Init Scorer
-    scorer = CorpusScorer(client_type="local", device="cuda", task="retrieval")
-
-    # 3. Calculate
-    # batch_size=8 is usually safe for 12GB VRAM with Jina-v4
-    df = scorer.calculate_individual_scores(sources, candidates, images, batch_size=8)
-    
-    # 4. Preview
-    print(df.head())
-    
+   
     mapper = JinaV4SimilarityMapper(task = 'retrieval') 
     results = mapper.calculate_multimodal_consistency(sources[0], candidates[0], images[0])
     #example result values:
