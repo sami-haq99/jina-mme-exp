@@ -143,7 +143,7 @@ if __name__ == "__main__":
     # Example Data
     sources = ["A cat sleeping", "A fast car"]
     candidates = ["Eine schlafende Katze", "Ein schnelles Auto"]
-    images = ["cat.jpg", "cat_dog.jpg"] # Local paths work best
+    images = ["cat.png", "cat_dog.png"] # Local paths work best
 
     results = evaluator.calculate_corpus_metrics(sources, candidates, images, batch_size=4)
     print("Results:", results)
