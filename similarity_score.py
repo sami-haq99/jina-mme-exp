@@ -355,18 +355,17 @@ class JinaV4SimilarityMapper:
         sim_matrix_src_img = torch.matmul(src_norm, img_norm.T)
         score_src_img = sim_matrix_src_img.max(dim=1).values.mean().item()
 
-        if visual_noise == True:
 
-            # 3. Apply Relevance-Weighted Fusion (Academic Standard)
-            # Weight lambda acts as a gate. 
-            # If Source doesn't match Image (score_t1_img is low), lambda -> 0.
-            # This prevents the visual part from ruining the score on bad images.
-            k = 2 # Sensitivity
-            lambda_weight = max(0, score_src_img) ** k
+        # 3. Apply Relevance-Weighted Fusion (Academic Standard)
+        # Weight lambda acts as a gate. 
+        # If Source doesn't match Image (score_t1_img is low), lambda -> 0.
+        # This prevents the visual part from ruining the score on bad images.
+        k = 2 # Sensitivity
+        lambda_weight = max(0, score_src_img) ** k
 
-            final_score_noise = (score_src_tgt + (lambda_weight * score_tgt_img)) / (1 + lambda_weight)
-        if visual_noise == False:   
-            final_score_wo_noise = (score_src_tgt + (lambda_weight * score_tgt_img)) / 2
+        final_score_noise = (score_src_tgt + (lambda_weight * score_tgt_img)) / (1 + lambda_weight)
+
+        final_score_wo_noise = (score_src_tgt + (lambda_weight * score_tgt_img)) / 2
         
         mmss = 2 * (score_src_tgt * score_tgt_img) / (score_src_tgt + score_tgt_img + 1e-9)
         return {
