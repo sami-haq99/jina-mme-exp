@@ -82,7 +82,7 @@ class BatchMultimodalMapper(JinaV4SimilarityMapper):
         instance_scores = (S_st + (lambdas * S_ti)) / (1 + lambdas + 1e-9)
         
         return {
-            "Corpus_MMSS (Macro)": float(np.mean(instance_scores)),
+            "Final Score)": float(np.mean(instance_scores)),
             "Avg_Text_Fidelity": float(np.mean(S_st)),
             "Avg_Visual_Grounding": float(np.mean(S_ti)),
             "Avg_Image_Relevance": float(np.mean(S_si)),
@@ -117,14 +117,49 @@ class BatchMultimodalMapper(JinaV4SimilarityMapper):
         return scores
 
 # --- Usage Example ---
+
+def load_corpus(src_lang, tgt_lang, sys, root_dir):
+
+    sources = []
+    candidates = []
+    images = []
+
+    with open(f'{root_dir}/{sys}.{src_lang}', 'r') as f:
+        sources.extend([line.strip() for line in f])
+    with open(f'{root_dir}/{sys}.{tgt_lang}', 'r') as f:
+        candidates.extend([line.strip() for line in f])
+    with open(f'{root_dir}/{images_file}', 'r') as f:
+        images.extend([line.strip() for line in f])
+
+    # Load your corpus data here
+    return sources, candidates, images
+
 if __name__ == "__main__":
     # Initialize with local GPU
     evaluator = BatchMultimodalMapper(client_type="local", device="cuda", task="retrieval")
     
     # Example Data
+    
+    # Example Data
     sources = ["A cat sleeping", "A fast car"]
     candidates = ["Eine schlafende Katze", "Ein schnelles Auto"]
-    images = ["cat.jpg", "cart_dog.jpg"] # Local paths work best
+    images = ["cat.jpg", "cat_dog.jpg"] # Local paths work best
 
     results = evaluator.calculate_corpus_metrics(sources, candidates, images, batch_size=4)
     print("Results:", results)
+    
+    """ 
+    src_lang = 'en'
+    tgt_lang = 'de'
+    images_file = src_lang+tgt_lang+'_images.txt'  # Example file containing image paths or URLs
+    sys_name = ['aya', 'zeromt']
+    
+    for sys in sys_name:
+        sources, candidates, images = load_corpus(src_lang, tgt_lang, sys, root_dir="./corpus_data/")
+
+        results = evaluator.calculate_corpus_metrics(sources, candidates, images, batch_size=4)
+        print("Results:", results)
+        #save the result to csv file, with each record on exactly 1 line to match the lines with src and tgt files
+        with open(f"./corpus_data/{sys}_results.csv", "w") as f:
+            for i in range(len(sources)):
+                f.write(f"{sources[i]},{candidates[i]},{images[i]},{results['Final Score']},{results['Avg_Text_Fidelity']},{results['Avg_Visual_Grounding']},{results['Avg_Image_Relevance']},{results['Num_Samples']}\n") """
