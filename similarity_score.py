@@ -329,7 +329,8 @@ class JinaV4SimilarityMapper:
         self,
         source: str, # Source
         candidate: str, # Target/Candidate
-        image: Union[str, bytes, Image.Image]
+        image: Union[str, bytes, Image.Image],
+        visual_noise: bool = True
     ) -> Dict[str, float]:
         
         # 1. Fetch all Embeddings
@@ -354,19 +355,24 @@ class JinaV4SimilarityMapper:
         sim_matrix_src_img = torch.matmul(src_norm, img_norm.T)
         score_src_img = sim_matrix_src_img.max(dim=1).values.mean().item()
 
-        # 3. Apply Relevance-Weighted Fusion (Academic Standard)
-        # Weight lambda acts as a gate. 
-        # If Source doesn't match Image (score_t1_img is low), lambda -> 0.
-        # This prevents the visual part from ruining the score on bad images.
-        k = 2 # Sensitivity
-        lambda_weight = max(0, score_src_img) ** k
+        if visual_noise:
+      
+            # 3. Apply Relevance-Weighted Fusion (Academic Standard)
+            # Weight lambda acts as a gate. 
+            # If Source doesn't match Image (score_t1_img is low), lambda -> 0.
+            # This prevents the visual part from ruining the score on bad images.
+            k = 2 # Sensitivity
+            lambda_weight = max(0, score_src_img) ** k
 
-        final_score = (score_src_tgt + (lambda_weight * score_tgt_img)) / (1 + lambda_weight)
+            final_score_noise = (score_src_tgt + (lambda_weight * score_tgt_img)) / (1 + lambda_weight)
+        else:   
+            final_score_wo_noise = (score_src_tgt + (lambda_weight * score_tgt_img)) / 2
         
         mmss = 2 * (score_src_tgt * score_tgt_img) / (score_src_tgt + score_tgt_img + 1e-9)
         return {
             "MMSS": round(mmss, 4),
-            "Final_Compound_Score": round(final_score, 4),
+            "Final_Compound_Score": round(final_score_wo_noise, 4),
+            "Final_Compound_Score (Noise)": round(final_score_noise, 4),
             "Text_Fidelity (T1-T2)": round(score_src_tgt, 4),
             "Visual_Grounding (T2-Img)": round(score_tgt_img, 4),
             "Image_Relevance (T1-Img)": round(score_src_img, 4),
