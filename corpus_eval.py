@@ -144,7 +144,8 @@ if __name__ == "__main__":
     output_dir = "../results/"
     image_dir = root_dir + "images/"
     mapper = JinaV4SimilarityMapper(task = 'retrieval') 
-   
+    
+    os.makedirs(output_dir, exist_ok=True) # Ensure output directory exists
     print("Multimodal Consistency Results:")
    
     src_lang = 'en'
@@ -168,6 +169,7 @@ if __name__ == "__main__":
                 
             with open(f"{output_dir}{sys}_{tlang}_results.csv", "w") as f:
                 #add the header column
+                print(f"Writing results to {output_dir}{sys}_{tlang}_results.csv")
                 f.write("Source, Candidate, Image, Final_Score, Text_Fidelity (Src-Tgt), Visual_Grounding (Tgt-Img), Image_Relevance (Src-Img), Fusion_Weight\n")
                 for i in range(len(sources)):
                     #remove the image path from images
