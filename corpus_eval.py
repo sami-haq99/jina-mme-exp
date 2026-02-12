@@ -4,7 +4,7 @@ import pandas as pd
 from typing import List, Union
 from tqdm import tqdm
 from similarity_score import JinaV4SimilarityMapper # Your local file
-
+import os
 class CorpusScorer(JinaV4SimilarityMapper):
     """
     Optimized scorer for generating individual row-level results on a GPU.
@@ -114,18 +114,19 @@ class CorpusScorer(JinaV4SimilarityMapper):
 
 
 
-def load_corpus(src_lang, tgt_lang, sys, root_dir):
+def load_corpus(src_file, tgt_file, image_file, image_dir):
 
     sources = []
     candidates = []
     images = []
 
-    with open(f'{root_dir}/{sys}.{src_lang}', 'r') as f:
+    with open(src_file, 'r') as f:
         sources.extend([line.strip() for line in f])
-    with open(f'{root_dir}/{sys}.{tgt_lang}', 'r') as f:
+    with open(tgt_file, 'r') as f:
         candidates.extend([line.strip() for line in f])
-    with open(f'{root_dir}/{images_file}', 'r') as f:
-        images.extend([line.strip() for line in f])
+    with open(image_file, 'r') as f:
+        #add full path to file name
+        images.extend([os.path.join(image_dir, line.strip()) for line in f])
 
     # Load your corpus data here
     return sources, candidates, images
@@ -152,7 +153,7 @@ if __name__ == "__main__":
     
     for sys in sys_name:
         results = []
-        sources, candidates, images = load_corpus(tgt_lang+"_src."+src_lang, tgt_lang, sys, root_dir=root_dir)
+        sources, candidates, images = load_corpus(root_dir+tgt_lang+"_src."+src_lang, root_dir+sys_name+"."+tgt_lang, images_file, image_dir)
         for src, cand, img in zip(sources, candidates, images):
             print(f"Source: {src}\nCandidate: {cand}\nImage: {img}\n---")
             result = mapper.calculate_multimodal_consistency(src, cand, img)
