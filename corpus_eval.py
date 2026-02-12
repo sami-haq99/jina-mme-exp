@@ -164,4 +164,5 @@ if __name__ == "__main__":
             
         with open(f"{sys}_results.csv", "w") as f:
             for i in range(len(sources)):
-                f.write(f"{sources[i]},{candidates[i]},{images[i]},{results[i]['Final Score']},{results[i]['Avg_Text_Fidelity']},{results[i]['Avg_Visual_Grounding']},{results[i]['Avg_Image_Relevance']},{results[i]['Num_Samples']}\n")
+                f.write(f"{sources[i]},{candidates[i]},{images[i]},{results[i]['Final_Score']},{results[i]['Text_Fidelity (Src-Tgt)']},{results[i]['Visual_Grounding (Tgt-Img)']},{results[i]['Image_Relevance (Src-Img)']},{results[i]['Fusion_Weight']}\n")
+
