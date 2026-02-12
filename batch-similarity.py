@@ -231,7 +231,6 @@ if __name__ == "__main__":
     candidates = ["Wir müssen uns von diesem Maulwurf trennen.", "Er kam endlich an der Bank an."] * 10
     images = [ "mole.jpeg", "bank.jpeg"] * 10 # Ensure these files exist locally!
 
-    
     mapper = JinaV4SimilarityMapper(task = 'retrieval') 
     results = mapper.calculate_individual_scores(sources, candidates, images)
     #example result values:
