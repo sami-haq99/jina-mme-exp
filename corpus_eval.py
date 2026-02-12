@@ -160,7 +160,7 @@ if __name__ == "__main__":
             results.append(result)
             print("Results:", result)
             #save the result to csv file, with each record on exactly 1 line to match the lines with src and tgt files
-            exit(0) # Remove this exit after testing the first record
+            # Remove this exit after testing the first record
             
         with open(f"{sys}_results.csv", "w") as f:
             for i in range(len(sources)):
