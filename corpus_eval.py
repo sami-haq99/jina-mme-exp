@@ -153,7 +153,7 @@ if __name__ == "__main__":
     
     for sys in sys_name:
         results = []
-        sources, candidates, images = load_corpus(root_dir+tgt_lang+"_src."+src_lang, root_dir+sys_name+"."+tgt_lang, images_file, image_dir)
+        sources, candidates, images = load_corpus(root_dir+tgt_lang+"_src."+src_lang, root_dir+sys+"."+tgt_lang, images_file, image_dir)
         for src, cand, img in zip(sources, candidates, images):
             print(f"Source: {src}\nCandidate: {cand}\nImage: {img}\n---")
             result = mapper.calculate_multimodal_consistency(src, cand, img)
