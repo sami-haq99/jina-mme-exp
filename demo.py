@@ -55,11 +55,22 @@ def main():
 
     # 2. Define Inputs
     # You can use a local file path or a URL
-    image_source = "cyclists.jpg" 
-    text_query = ["A group of cyclists riding nearby the ocean", "A group of cyclists riding nearby the ocean"]
+    
+    sources = ["We'll have to get rid of that mole.", "He finally made it to the bank."]  # 100 samples
+    candidates = ["Wir müssen uns von diesem Maulwurf trennen.", "Er kam endlich an der Bank an."] 
+    images = [ "mole.jpeg", "bank.jpeg"] # Ensure these files exist locally!
+
+    
 
     mapper = JinaV4SimilarityMapper(task = 'retrieval') 
-    results = mapper.calculate_multimodal_consistency(text_query[0], text_query[1], image_source)
+    results = mapper.calculate_multimodal_consistency(sources[0], candidates[0], images[0])
+    #example result values:
+
+    
+    print("Multimodal Consistency Results:")
+    print(results)
+
+    results = mapper.calculate_multimodal_consistency(sources[1], candidates[1], images[1])
     #example result values:
 
     

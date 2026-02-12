@@ -138,35 +138,28 @@ if __name__ == "__main__":
     
     # 1. Setup Data (Example)
     # In real usage, load these from a file
-    sources = ["We'll have to get rid of that mole.", "He finally made it to the bank."] * 10 # 100 samples
-    candidates = ["Wir müssen uns von diesem Maulwurf trennen.", "Er kam endlich an der Bank an."] * 10
-    images = [ "mole.jpeg", "bank.jpeg"] * 10 # Ensure these files exist locally!
-
    
+    root_dir = "../data/comute/"
+    image_dir = root_dir + "images/"
     mapper = JinaV4SimilarityMapper(task = 'retrieval') 
-    results = mapper.calculate_multimodal_consistency(sources[0], candidates[0], images[0])
-    #example result values:
-
-    
+   
     print("Multimodal Consistency Results:")
-    print(results)
-
-    results = mapper.calculate_multimodal_consistency(sources[1], candidates[1], images[1])
-
-    print("Multimodal Consistency Results:")
-    print(results)
-
-    # src_lang = 'en'
-    # tgt_lang = 'de'
-    # images_file = src_lang+tgt_lang+'_images.txt'  # Example file containing image paths or URLs
-    # sys_name = ['aya', 'zeromt']
+   
+    src_lang = 'en'
+    tgt_lang = 'de'
+    images_file = src_lang+tgt_lang+'_images.txt'  # Example file containing image paths or URLs
+    sys_name = ['aya', 'zeromt']
     
-    # for sys in sys_name:
-    #     sources, candidates, images = load_corpus(src_lang, tgt_lang, sys, root_dir="./corpus_data/")
-
-    #     results = evaluator.calculate_corpus_metrics(sources, candidates, images, batch_size=4)
-    #     print("Results:", results)
-    #     #save the result to csv file, with each record on exactly 1 line to match the lines with src and tgt files
-    #     with open(f"./corpus_data/{sys}_results.csv", "w") as f:
-    #         for i in range(len(sources)):
-    #             f.write(f"{sources[i]},{candidates[i]},{images[i]},{results['Final Score']},{results['Avg_Text_Fidelity']},{results['Avg_Visual_Grounding']},{results['Avg_Image_Relevance']},{results['Num_Samples']}\n") 
+    for sys in sys_name:
+        results = []
+        sources, candidates, images = load_corpus(tgt_lang+"_src."+src_lang, tgt_lang, sys, root_dir=root_dir)
+        for src, cand, img in zip(sources, candidates, images):
+            print(f"Source: {src}\nCandidate: {cand}\nImage: {img}\n---")
+            result = mapper.calculate_multimodal_consistency(src, cand, img)
+            results.append(result)
+            print("Results:", result)
+            #save the result to csv file, with each record on exactly 1 line to match the lines with src and tgt files
+        
+        with open(f"{sys}_results.csv", "w") as f:
+            for i in range(len(sources)):
+                f.write(f"{sources[i]},{candidates[i]},{images[i]},{results[i]['Final Score']},{results[i]['Avg_Text_Fidelity']},{results[i]['Avg_Visual_Grounding']},{results[i]['Avg_Image_Relevance']},{results[i]['Num_Samples']}\n")

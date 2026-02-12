@@ -365,7 +365,6 @@ class JinaV4SimilarityMapper:
 
         final_score = (score_src_tgt + (lambda_weight * score_tgt_img)) / (1 + lambda_weight)
         
-        mmss = 2 * (score_src_tgt * score_tgt_img) / (score_src_tgt + score_tgt_img + 1e-9)
         return {
             "Final_Score": round(final_score, 4),
             "Text_Fidelity (Src-Tgt)": round(score_src_tgt, 4),
