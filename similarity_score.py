@@ -180,7 +180,7 @@ class JinaV4SimilarityMapper:
              else:
                 query_embeddings = torch.tensor(query_embeddings[0])
         
-        print(f"Query embeddings shape: {query_embeddings.shape}") 
+        #print(f"Query embeddings shape: {query_embeddings.shape}") 
         preprocessor_results = self.preprocessor.process_texts(
             texts=[query],
             prefix="Query"
@@ -188,7 +188,7 @@ class JinaV4SimilarityMapper:
         input_ids = preprocessor_results["input_ids"]
         tokens = input_ids[0].tolist()
         tokens = self.preprocessor.tokenizer.convert_ids_to_tokens(tokens)
-        print(f"Tokens: {tokens}")
+        #print(f"Tokens: {tokens}")
         tokens = tokens[2:] # remove prefix
         query_embeddings = query_embeddings[2:] # remove prefix
         num_tokens = query_embeddings.shape[0]
@@ -202,7 +202,7 @@ class JinaV4SimilarityMapper:
 
         tokens = [tok.replace("Ġ", "") for tok in tokens]
         token_map = {i: tok for i, tok in enumerate(tokens)}
-        print(f"Token map: {token_map}")
+        #print(f"Token map: {token_map}")
         return tokens, query_embeddings, token_map
         
     def _find_best_grid(self, num_patches: int, aspect_ratio: float) -> Tuple[int, int]:
@@ -275,7 +275,7 @@ class JinaV4SimilarityMapper:
         num_patches = image_embeddings.shape[0]
         grid_height, grid_width = self._find_best_grid(num_patches, aspect_ratio)
         
-        print(f"DEBUG: Image Patches: {num_patches}, Grid: {grid_width}x{grid_height}")
+        #print(f"DEBUG: Image Patches: {num_patches}, Grid: {grid_width}x{grid_height}")
 
         return pil_image, image_embeddings, size, (grid_height, grid_width)
 

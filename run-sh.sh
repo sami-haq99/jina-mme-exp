@@ -13,4 +13,4 @@
 source /home/shaq/mtqe/env-mtqe/bin/activate
 
 
-python ic-gemma3b.py 
+python corpus_eval.py

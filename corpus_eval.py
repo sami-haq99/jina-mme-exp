@@ -141,28 +141,36 @@ if __name__ == "__main__":
     # In real usage, load these from a file
    
     root_dir = "../data/comute/"
+    output_dir = "../results/"
     image_dir = root_dir + "images/"
     mapper = JinaV4SimilarityMapper(task = 'retrieval') 
    
     print("Multimodal Consistency Results:")
    
     src_lang = 'en'
-    tgt_lang = 'de'
-    images_file = src_lang+tgt_lang+'_images.txt'  # Example file containing image paths or URLs
-    sys_name = ['aya', 'zeromt']
+    tgt_lang = ['cs', 'fr', 'de']
+      # Example file containing image paths or URLs
+    sys_name = ['aya', 'zeromt', 'gemma', 'opusmt']
     
-    for sys in sys_name:
-        results = []
-        sources, candidates, images = load_corpus(root_dir+tgt_lang+"_src."+src_lang, root_dir+sys+"."+tgt_lang, root_dir+images_file, image_dir)
-        for src, cand, img in zip(sources, candidates, images):
-            print(f"Source: {src}\nCandidate: {cand}\nImage: {img}\n---")
-            result = mapper.calculate_multimodal_consistency(src, cand, img)
-            results.append(result)
-            print("Results:", result)
-            #save the result to csv file, with each record on exactly 1 line to match the lines with src and tgt files
-            # Remove this exit after testing the first record
-            
-        with open(f"{sys}_results.csv", "w") as f:
-            for i in range(len(sources)):
-                f.write(f"{sources[i]},{candidates[i]},{images[i]},{results[i]['Final_Score']},{results[i]['Text_Fidelity (Src-Tgt)']},{results[i]['Visual_Grounding (Tgt-Img)']},{results[i]['Image_Relevance (Src-Img)']},{results[i]['Fusion_Weight']}\n")
+
+    for tlang in tgt_lang:
+        for sys in sys_name:
+            results = []
+            images_file = src_lang+tlang+'_images.txt'
+            sources, candidates, images = load_corpus(root_dir+tlang+"_src."+src_lang, root_dir+sys+"."+tlang, root_dir+images_file, image_dir)
+            for src, cand, img in zip(sources, candidates, images):
+                #print(f"Source: {src}\nCandidate: {cand}\nImage: {img}\n---")
+                result = mapper.calculate_multimodal_consistency(src, cand, img)
+                results.append(result)
+                #print("Results:", result)
+                #save the result to csv file, with each record on exactly 1 line to match the lines with src and tgt files
+                # Remove this exit after testing the first record
+                
+            with open(f"{output_dir}{sys}_{tlang}_results.csv", "w") as f:
+                #add the header column
+                f.write("Source, Candidate, Image, Final_Score, Text_Fidelity (Src-Tgt), Visual_Grounding (Tgt-Img), Image_Relevance (Src-Img), Fusion_Weight\n")
+                for i in range(len(sources)):
+                    #remove the image path from images
+                    img = os.path.basename(images[i])
+                    f.write(f"{sources[i]},{candidates[i]},{img},{results[i]['Final_Score']},{results[i]['Text_Fidelity (Src-Tgt)']},{results[i]['Visual_Grounding (Tgt-Img)']},{results[i]['Image_Relevance (Src-Img)']},{results[i]['Fusion_Weight']}\n")
 
