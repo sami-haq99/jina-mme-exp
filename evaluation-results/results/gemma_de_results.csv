@@ -1,0 +1,301 @@
+Source, Candidate, Image, Final_Score, Text_Fidelity (Src-Tgt), Visual_Grounding (Tgt-Img), Image_Relevance (Src-Img), Fusion_Weight
+We'll have to get rid of that mole.,Wir müssen diesen Muttermal entfernen.,e9490cd.jpeg,0.5732,0.596,0.3968,0.3599,0.1295
+We'll have to get rid of that mole.,Wir müssen das Maulwurf loswerden.,e2f18daf.jpeg,0.5873,0.6037,0.4765,0.3848,0.1481
+He finally made it to the bank.,Er hat es endlich zum See geschafft.,40cc251e.jpeg,0.5963,0.6195,0.384,0.3301,0.109
+He finally made it to the bank.,Er hat es endlich zur Bank geschafft.,d12293c.jpeg,0.7332,0.7755,0.4178,0.3662,0.1341
+So you see, they don't even own the plant.,Sie besitzen die Pflanze ja nicht einmal.,d8011246.jpeg,0.5267,0.5302,0.498,0.3443,0.1185
+So you see, they don't even own the plant.,Siehst du, sie besitzen die Anlage ja nicht einmal.,4bedbae4.jpeg,0.5687,0.5932,0.3622,0.3439,0.1182
+There are still a couple of bugs left.,Es gibt noch ein paar Fehler.,b547ce7.jpeg,0.577,0.5934,0.4976,0.4546,0.2067
+There are still a couple of bugs left.,Noch ein paar Käfer sind übrig.,d1f5f19.jpeg,0.5853,0.6177,0.476,0.5438,0.2958
+Hand me that bow.,Gib mir das Schleifchen.,8b24724.jpeg,0.5486,0.5778,0.4127,0.4637,0.215
+Hand me that bow.,Gib mir den Bogen.,cf7bfad.jpeg,0.5851,0.6107,0.4829,0.4999,0.2499
+Do you want to borrow my glasses?,Möchtest du meine Brille ausprobieren?,dc8979e.jpeg,0.5664,0.6001,0.3671,0.4115,0.1693
+Do you want to borrow my glasses?,Möchtest du mein Glas ausleihen?,9ef4910.jpeg,0.5638,0.5902,0.3853,0.3849,0.1481
+There are chips in a bowl.,Es gibt Chips in einer Schüssel.,c6249700.jpeg,0.6601,0.6872,0.5835,0.5939,0.3527
+There are chips in a bowl.,Es gibt Pommes in einer Schüssel.,737c4103.jpeg,0.55,0.5387,0.585,0.5692,0.3239
+First we should fill up the boot.,Zuerst sollten wir den Kofferraum füllen.,a13f9a0.jpeg,0.6359,0.6644,0.3628,0.3233,0.1045
+First we should fill up the boot.,Zuerst sollten wir den Stiefel füllen.,a01e98cb.jpeg,0.6268,0.6502,0.4584,0.3722,0.1386
+Put down your arms.,Legt eure Waffen nieder.,48ef354.jpeg,0.5553,0.5744,0.4228,0.379,0.1437
+Put down your arms.,Lass deine Arme sinken.,f8f9418.jpeg,0.5583,0.5735,0.4637,0.401,0.1608
+It must be the spring.,Es muss Frühling sein.,e20c4ff.jpeg,0.6147,0.6557,0.4167,0.4553,0.2073
+It must be the spring.,Das muss die Feder sein.,458999c.jpeg,0.432,0.4353,0.4181,0.4926,0.2426
+My chest is quite heavy...,Meine Brust ist ziemlich schwer.,edf9e44e.jpeg,0.6588,0.7144,0.4591,0.5279,0.2787
+My chest is quite heavy...,Meine Kiste ist ziemlich schwer.,f4f9494.jpeg,0.4749,0.4792,0.4275,0.303,0.0918
+The beam seems to be moving.,Der Strahl scheint sich zu bewegen.,a8b1169.jpeg,0.691,0.737,0.5424,0.5564,0.3096
+The beam seems to be moving.,Der Balken scheint sich zu bewegen.,e50fb00.jpeg,0.6043,0.6448,0.3622,0.4086,0.1669
+Over there by the pen.,Dort drüben am Zaun.,8de21f5.jpeg,0.5849,0.5997,0.5049,0.4296,0.1846
+Over there by the pen.,Dort drüben am Stift.,68161a4.jpeg,0.5073,0.5394,0.3083,0.4018,0.1615
+They're braces.,Das sind Hosenträger.,230b2b4.jpeg,0.4727,0.4744,0.4592,0.3531,0.1246
+They're braces.,Das sind Zahnspangen.,a9ee65f.jpeg,0.6023,0.6012,0.6052,0.6269,0.3929
+I know. The last one was a real nut.,Das weiß ich. Der letzte war ein echter Verrückter.,d9cbe61.jpeg,0.6081,0.658,0.3671,0.4548,0.2069
+I know. The last one was a real nut.,Das weiß ich. Der letzte war ein echter Verrückter.,7adadb10.jpeg,0.6151,0.658,0.3021,0.37,0.1369
+It might be easier with a pick.,Es könnte einfacher sein, mit einem Plektrum zu spielen.,b599303.jpeg,0.6364,0.6818,0.4612,0.5092,0.2593
+It might be easier with a pick.,Es könnte mit einer Hacke einfacher gehen.,4a6ca5a.jpeg,0.5906,0.6282,0.4078,0.4531,0.2053
+I have a club.,Ich habe einen Kreuzer.,cce02b1.jpeg,0.429,0.4486,0.3633,0.5468,0.2989
+I have a club.,Ich habe einen Club.,d01da65.jpeg,0.6215,0.6597,0.4155,0.4305,0.1853
+Which port does he want?,Welchen Hafen möchte er?,de257f1.jpeg,0.6225,0.6364,0.5407,0.4127,0.1704
+Which port does he want?,Welchen Port möchte er?,4511cf4.jpeg,0.76,0.8138,0.4794,0.4377,0.1916
+Sorry, the tape's just run out.,Die Kassette ist leider leer.,cc50c7e0.jpeg,0.4601,0.4491,0.5325,0.39,0.1521
+Sorry, the tape's just run out.,Das Klebeband ist leider leer.,8207d9b2.jpeg,0.4411,0.4205,0.5436,0.4483,0.201
+They checked the seal.,Sie prüften das Siegel.,8b12aebf.jpeg,0.5206,0.5325,0.3845,0.2947,0.0868
+They checked the seal.,Sie haben die Robbe untersucht.,59364b5.jpeg,0.3847,0.3766,0.4314,0.4143,0.1716
+Why is the chair here?,Warum ist der Stuhl hier?,2caf5d9.jpeg,0.731,0.8196,0.3961,0.5144,0.2646
+Why is the chair here?,Warum ist der Stuhl hier?,ef02ac2.jpeg,0.7383,0.8196,0.5559,0.6679,0.4461
+There must be a hole in the tank somewhere.,Es muss irgendwo ein Loch im Aquarium sein.,22f9dcb.jpeg,0.592,0.6169,0.4447,0.4107,0.1687
+There must be a hole in the tank somewhere.,Es muss irgendwo ein Loch im Tank sein.,acb5659.jpeg,0.6351,0.6811,0.4424,0.4886,0.2387
+We're going to have to do without the poker then.,Dann müssen wir wohl auf das Pokerspiel verzichten.,c0816da.jpeg,0.599,0.6146,0.5047,0.4074,0.166
+We're going to have to do without the poker then.,Dann müssen wir wohl auf den Glutanzünder verzichten.,32da2f5.jpeg,0.4807,0.4933,0.3561,0.3173,0.1007
+I don't give a damn about the cup.,Mir ist der Pokal egal.,2f05055.jpeg,0.396,0.3946,0.4031,0.4374,0.1913
+I don't give a damn about the cup.,Mir ist die Tasse egal.,247987b2.jpeg,0.4449,0.4523,0.4154,0.4984,0.2484
+The fans were still out of order.,Die Fans waren noch außer Kontrolle.,0316663.jpeg,0.6061,0.6189,0.5165,0.3784,0.1432
+The fans were still out of order.,Die Ventilatoren waren noch außer Betrieb.,657c4a7.jpeg,0.6519,0.6878,0.5274,0.5369,0.2883
+I don't think we should use a brush.,Ich glaube, wir sollten keine Bürste benutzen.,189049b.jpeg,0.6189,0.6482,0.4888,0.4739,0.2246
+I don't think we should use a brush.,Ich glaube, wir sollten keinen Pinsel benutzen.,ff78fc7.jpeg,0.6002,0.6338,0.442,0.4611,0.2126
+There's the horn.,Da ist die Hupe.,ed2221a.jpeg,0.4514,0.4381,0.4875,0.6072,0.3686
+There's the horn.,Da ist das Horn.,7d6fbfa.jpeg,0.4747,0.487,0.4235,0.4899,0.24
+Can you not see the red light?,Siehst du nicht das rote Licht?,7241ebd.jpeg,0.5878,0.6185,0.4947,0.5736,0.3291
+Can you not see the red light?,Kannst du das rote Licht nicht sehen?,fb2edd5.jpeg,0.6538,0.7068,0.4741,0.543,0.2948
+I know - good job there are showers.,Gute Arbeit, dass es regnet.,a78f616.jpeg,0.5347,0.5468,0.4519,0.3834,0.147
+I know - good job there are showers.,Gott sei Dank gibt es Duschen.,3a1b985.jpeg,0.4627,0.4595,0.4819,0.4062,0.165
+Like a bat?,Wie eine Fledermaus?,e40843b.jpeg,0.5039,0.4938,0.5365,0.5581,0.3115
+Like a bat?,Wie ein Schläger?,c239573.jpeg,0.3804,0.363,0.473,0.4337,0.1881
+You should use a fork.,Man benutzt eine Gabel.,1aea2b4.jpeg,0.4631,0.4645,0.4576,0.5087,0.2587
+You should use a fork.,Mit einer Gabel im Arm genießt der Bauer gerade eine Tasse Kaffee.,bbad554.jpeg,0.4362,0.3956,0.6711,0.4159,0.173
+What a beautiful bass!,Was ein schöner Bass!,a96afbd.jpeg,0.6276,0.677,0.4882,0.5952,0.3543
+What a beautiful bass!,Was ein schöner Barsch!,3165ef6.jpeg,0.509,0.5225,0.4505,0.4807,0.231
+A biker on the road.,Ein Motorradfahrer auf der Straße.,4ercqd74.jpeg,0.7544,0.7615,0.7396,0.6966,0.4852
+A biker on the road.,Ein Radfahrer auf der Straße.,d56edd34.jpeg,0.729,0.7309,0.7251,0.7107,0.5051
+That's lots of bucks!,Das sind viele Hirsche!,bee3626.jpeg,0.5291,0.5198,0.5901,0.3895,0.1517
+That's lots of bucks!,Das sind eine Menge Geld!,7c4e078.jpeg,0.6467,0.6411,0.6654,0.546,0.2981
+A person looking at a rock.,Eine Person schaut auf einen Felsen.,d052f05f.jpeg,0.7371,0.7784,0.6229,0.6013,0.3616
+A person looking at a rock.,Eine Person betrachtet einen Stein.,118a75ff.jpeg,0.7904,0.8525,0.5264,0.4847,0.2349
+The lamp is tall and elegant.,Die Lampe ist hoch und elegant.,5a43462.jpeg,0.7816,0.8581,0.5841,0.6222,0.3872
+The lamp is tall and elegant.,Die Laterne ist hoch und elegant.,ffda480.jpeg,0.7249,0.7812,0.4745,0.4744,0.225
+Give me the file please.,Bitte gib mir die Akte.,e740816.jpeg,0.4261,0.4249,0.4319,0.467,0.2181
+Give me the file please.,Ich schärfe den Rasierer.,c47d9e24.jpeg,0.2391,0.2081,0.4911,0.3503,0.1227
+The tube looks dirty!,Die U-Bahn sieht schmutzig aus!,27b9b32.jpeg,0.5728,0.58,0.5163,0.3563,0.127
+The tube looks dirty!,Die Probe sieht schmutzig aus!,2535cf5.jpeg,0.5079,0.5286,0.407,0.4535,0.2057
+An animal sitting in a palm.,Ein Tier sitzt in einer Palme.,a9c0ad02.jpeg,0.8046,0.8786,0.6139,0.6227,0.3878
+An animal sitting in a palm.,Ein Tier in der Handfläche.,638a4049.jpeg,0.5988,0.5854,0.6589,0.4722,0.223
+Show me the ring!,Zeig mir den Ring!,32962fc.jpeg,0.6275,0.6609,0.5278,0.5784,0.3346
+Show me the ring!,Zeig mir den Ring!,f4217ff.jpeg,0.6253,0.6609,0.3901,0.3886,0.151
+A man with a hat is smoking.,Ein Mann mit einem Hut raucht.,ee1f6c9.jpeg,0.8439,0.9028,0.7419,0.7598,0.5772
+A man with a hat is smoking.,Ein Mann mit einem Hut raucht.,33fbe77.jpeg,0.8434,0.9028,0.7332,0.7344,0.5394
+A group of boys playing football.,Eine Gruppe von Jungen spielt Fußball.,787678e.jpeg,0.754,0.839,0.5203,0.6031,0.3638
+A group of boys playing football.,Eine Gruppe von Jungen spielt Fußball.,2db1e17.jpeg,0.7821,0.839,0.6399,0.6325,0.4001
+Get away from the float!,Vermeide den Bojen!,a021362.jpeg,0.4609,0.4606,0.4624,0.4741,0.2248
+Get away from the float!,Vom Festwagen weg!,48a50026.jpeg,0.4473,0.4406,0.483,0.4354,0.1896
+A woman is folding sheets.,Eine Frau faltet Papier.,c82c823d.jpg,0.707,0.7453,0.5275,0.4618,0.2132
+A woman is folding sheets.,Eine Frau faltet Bettwäsche.,a5ee9d0.jpeg,0.7222,0.7785,0.5239,0.5331,0.2841
+A boy using a compass.,Ein Junge benutzt einen Kompass.,00112e3.jpeg,0.7831,0.873,0.507,0.5708,0.3258
+A boy using a compass.,Ein Junge benutzt einen Zirkel.,edbb25a2.jpeg,0.6783,0.7351,0.456,0.5056,0.2557
+Could you fix the sink please?,Könnten Sie bitte die Spüle reparieren?,d8d0a9b.jpeg,0.5825,0.6494,0.3893,0.5886,0.3465
+Could you fix the sink please?,Könnten Sie bitte das Waschbecken reparieren?,3ab2469.jpeg,0.5919,0.6362,0.475,0.6158,0.3792
+Look at the balloon!,Schau dir den Ballon an!,d33f4b4.jpeg,0.6465,0.6868,0.5333,0.597,0.3564
+Look at the balloon!,Schau dir den Ballon an!,58aace5.jpeg,0.6428,0.6868,0.503,0.5612,0.315
+He seems to be enjoying the date!,Er scheint das Date zu genießen!,9e36a43.jpeg,0.6036,0.64,0.4561,0.497,0.247
+He seems to be enjoying the date!,Er scheint die Dattel zu genießen!,34965040.jpeg,0.6034,0.6114,0.5468,0.374,0.1399
+Don't eat the bones!,Iss die Knochen nicht!,5957d5c.jpeg,0.4743,0.4815,0.4352,0.4294,0.1844
+Don't eat the bones!,Iss die Knochen nicht!,49ea273.jpeg,0.4798,0.4815,0.4719,0.4667,0.2178
+The match lasted a long time!,Das Spiel dauerte lange!,66639c14.jpeg,0.6348,0.6887,0.3927,0.4719,0.2227
+The match lasted a long time!,Der Streichholz hat lange gebrannt!,14d08bc6.jpeg,0.478,0.462,0.5531,0.4611,0.2126
+Great, it's cricket season!,Toll, es ist Cricket-Saison!,8d852883.jpeg,0.4226,0.4248,0.4109,0.4366,0.1906
+Great, it's cricket season!,Toll, es ist Heimsuchtszeit!,b25981e4.jpeg,0.2442,0.2478,0.2157,0.3577,0.128
+We've got another jam I'm afraid.,Es ist wieder eine Papierstau.,75ddacf3.jpeg,0.4388,0.4417,0.4012,0.279,0.0779
+We've got another jam I'm afraid.,Es gibt wieder einen Stau, fürchte ich.,fbe7b91d.jpeg,0.4624,0.4636,0.4515,0.3352,0.1124
+Yes, it's his bar.,Ja, das ist seine Bar.,51d84e9f.jpeg,0.6876,0.747,0.4836,0.5394,0.291
+Yes, it's his bar.,Ja, es ist seine Hantel.,cd40761f.jpeg,0.57,0.6024,0.3949,0.43,0.1849
+A minister is making a speech while holding a book.,Eine Ministerin hält eine Rede und liest aus einem Buch vor.,2139a010.jpeg,0.7644,0.7845,0.7179,0.6562,0.4306
+A minister is making a speech while holding a book.,Ein Pfarrer hält eine Rede und hält ein Buch.,1c56342c.jpeg,0.7739,0.7808,0.7619,0.7529,0.5668
+He set about repairing his drawers.,Er begann, seine Unterhose zu reparieren.,18289856.jpeg,0.5548,0.5593,0.508,0.3109,0.0966
+He set about repairing his drawers.,Er begann, seine Schubladen zu reparieren.,9655583e.jpeg,0.6187,0.6519,0.4348,0.4248,0.1804
+Do you know where my pants are?,Wo sind meine Hosen?,e7b25b62.jpeg,0.5074,0.5321,0.4073,0.4966,0.2466
+Do you know where my pants are?,Wo sind meine Shorts?,0f0d614f.jpeg,0.4706,0.4751,0.4469,0.4331,0.1876
+Did you make the table?,Ich muss warten, bis die Lehrerin mich zum Reden auffordert.,98064330.png,0.2953,0.2468,0.5901,0.4056,0.1645
+Did you make the table?,Haben Sie den Tisch gemacht?,ef36615f.jpeg,0.5581,0.5719,0.4266,0.3243,0.1052
+Give me the bill.,Geben Sie mir bitte die Quittung.,67f4273e.jpeg,0.5634,0.5851,0.4779,0.5042,0.2542
+Give me the bill.,Gib mir das Geldschein.,3cdf263f.jpeg,0.4672,0.4448,0.5857,0.4341,0.1884
+I always remove the skin before eating.,Ich entferne die Haut immer, bevor ich esse.,10024f9c.jpeg,0.5996,0.6424,0.4275,0.4988,0.2488
+I always remove the skin before eating.,Ich schäle sie immer, bevor ich sie esse.,6d3f6275.jpeg,0.6605,0.6903,0.5663,0.5631,0.3171
+It's pool time!,Es ist Badesaison!,945eaafe.jpeg,0.5672,0.6124,0.4442,0.6068,0.3683
+It's pool time!,Es ist Zeit für Billard!,f8f08662.jpeg,0.5139,0.5093,0.5363,0.4552,0.2072
+The wheel seems to be blocked somehow.,Das Rad scheint irgendwie blockiert zu sein.,62601802.jpeg,0.723,0.7983,0.5092,0.593,0.3516
+The wheel seems to be blocked somehow.,Das Lenkrad scheint irgendwie blockiert zu sein.,d25f8b00.jpeg,0.6797,0.712,0.5617,0.5233,0.2739
+Your punch is amazing!,Dein Punsch ist fantastisch!,ca74d696.jpeg,0.5691,0.608,0.4067,0.4889,0.239
+Your punch is amazing!,Dein Schlag ist unglaublich!,33a17046.jpeg,0.45,0.4639,0.3408,0.3567,0.1273
+My husband bought a chopper recently.,Mein Mann hat vor kurzem einen Chopper gekauft.,b83a0d52.jpeg,0.6555,0.7102,0.4099,0.4719,0.2227
+My husband bought a chopper recently.,Mein Mann hat vor kurzem einen Hubschrauber gekauft.,cf615703.jpeg,0.5446,0.5603,0.4018,0.3326,0.1106
+You bought a new scarf, didn't you?,Hast du dir einen neuen Schal gekauft, oder?,bd7e6fd1.jpeg,0.6244,0.6849,0.3603,0.4784,0.2289
+You bought a new scarf, didn't you?,Du hast dir einen neuen Schal gekauft, oder?,f36df8d4.jpeg,0.6836,0.7418,0.5061,0.5728,0.3281
+We are under the canopy.,Wir sind unter dem Blätterdach.,275d8d87.jpeg,0.621,0.6676,0.384,0.4437,0.1968
+We are under the canopy.,Wir sind unter der Markise.,417a2e1b.jpeg,0.6479,0.7009,0.445,0.511,0.2611
+The dummies need to be cleaned.,Die Schnuller müssen gereinigt werden.,860e2fac.jpeg,0.5432,0.5533,0.4578,0.3439,0.1182
+The dummies need to be cleaned.,Die Mannequins müssen gereinigt werden.,1b2e7f19.jpeg,0.5352,0.5359,0.5301,0.3762,0.1415
+He wants to show me his spot.,Er will mir seinen Surfspot zeigen.,dd57e9c4.jpeg,0.6473,0.666,0.4399,0.2997,0.0898
+He wants to show me his spot.,Er möchte mir seinen Pickel zeigen.,37b65d2c.jpeg,0.5859,0.5945,0.4419,0.2441,0.0596
+Have you seen my pin?,Hast du meine Brosche gesehen?,aca94558.jpeg,0.5008,0.5092,0.4124,0.3095,0.0958
+Have you seen my pin?,Hast du meinen Reißzwecke gesehen?,b764bfff.jpeg,0.4418,0.4652,0.2389,0.3394,0.1152
+The scale is broken.,Die Waage ist kaputt.,28b179a0.jpeg,0.6911,0.7009,0.6694,0.6701,0.449
+The scale is broken.,Die Schuppe ist beschädigt.,a42e8405.jpeg,0.4958,0.5037,0.3898,0.2731,0.0746
+Someone should clean the window.,Man sollte das Fenster putzen.,c0d48044.jpeg,0.6031,0.6333,0.4082,0.3931,0.1546
+Someone should clean the window.,Jemand sollte das Fenster putzen.,2baa9a21.jpeg,0.692,0.7175,0.608,0.5514,0.304
+Don't let the kids play in the yard!,Lass die Kinder nicht im Hof spielen!,58d45ce7.jpeg,0.6452,0.6738,0.299,0.2874,0.0826
+Don't let the kids play in the yard!,Lass die Kinder nicht im Hof spielen!,b685970b.jpeg,0.6376,0.6738,0.3308,0.3436,0.1181
+The plug has stopped working, could you fix it?,Der Stopfen funktioniert nicht mehr, könnten Sie ihn reparieren?,15ff842a.jpeg,0.578,0.604,0.4196,0.405,0.164
+The plug has stopped working, could you fix it?,Der Stecker funktioniert nicht mehr, könnten Sie ihn reparieren?,7f021dbf.jpeg,0.6337,0.6807,0.4615,0.5223,0.2728
+That's a small stone you have there.,Das ist ein kleiner Stein, den du da hast.,834c9575.jpeg,0.7017,0.7422,0.5663,0.5472,0.2994
+That's a small stone you have there.,Das ist ein kleiner Kern, den du da hast.,94e1e71f.jpeg,0.517,0.5274,0.4568,0.4165,0.1735
+I dropped a clip on the floor but I'm not sure where.,Ich habe eine Büroklammer fallen lassen, aber ich bin mir nicht sicher, wo.,0899e541.jpeg,0.6093,0.6343,0.4661,0.4178,0.1746
+I dropped a clip on the floor but I'm not sure where.,Ich habe eine Haarklammer fallen lassen, aber ich weiß nicht wo.,407421d6.jpeg,0.5851,0.6022,0.4536,0.3602,0.1298
+Hand me the dough!,Gib mir den Teig!,3221b8a2.jpeg,0.5219,0.5313,0.4889,0.5317,0.2827
+Hand me the dough!,Gib mir das Geld!,a32d69d2.jpeg,0.4043,0.3805,0.5207,0.4523,0.2046
+You need to get rid of the ashes.,Die Asche muss weg.,0a13492f.jpeg,0.5457,0.5789,0.3593,0.4215,0.1776
+You need to get rid of the ashes.,Die Asche muss weg.,1cb7d406.jpeg,0.5467,0.5789,0.3784,0.4373,0.1912
+She's got a bun in the oven.,Sie erwartet ein Kind.,acce2bc9.jpeg,0.4504,0.4681,0.2898,0.3323,0.1104
+She's got a bun in the oven.,Sie bekommt Nachwuchs.,46dbc605.jpeg,0.5229,0.5258,0.5114,0.5,0.25
+He's got balls!,Er hat Bälle!,2655a11f.jpeg,0.5739,0.5848,0.5127,0.4226,0.1786
+He's got balls!,Der hat Nacken!,6daef42a.jpeg,0.5455,0.571,0.3505,0.3615,0.1307
+Don't mess with the controller!,Fassen Sie den Fahrkartenprüfer nicht an!,2f851ed7.jpeg,0.4573,0.4543,0.487,0.3182,0.1012
+Don't mess with the controller!,Fass die Controller nicht an!,229d48e1.jpeg,0.4722,0.4662,0.5044,0.4343,0.1886
+The deer was just looking straight at me.,Der Hirsch hat mich geradeaus angesehen.,6bd69bcb.jpeg,0.6795,0.7298,0.5721,0.6842,0.4681
+The deer was just looking straight at me.,Das Reh hat mich geradeaus angesehen.,b2ccd0d9.jpeg,0.6032,0.6625,0.4755,0.6815,0.4645
+A doe in the field.,Eine Hirschkuh auf der Wiese.,cfd47eb7.jpeg,0.6782,0.6852,0.6661,0.7588,0.5758
+A doe in the field.,Eine Häsin auf der Wiese.,6476789.jpeg,0.6568,0.6869,0.5409,0.5102,0.2603
+Don't look at the fly!,Eine Fliege sitzt auf einem Blatt.,b256d36e.jpeg,0.4454,0.3934,0.736,0.4228,0.1788
+Don't look at the fly!,Schau nicht auf den Reißverschluss!,e11c1505.jpeg,0.5555,0.5683,0.4048,0.2922,0.0854
+He bought his own plane.,Er hat sein eigenes Flugzeug gekauft.,57c4057c.jpeg,0.7087,0.7484,0.5301,0.4713,0.2221
+He bought his own plane.,Er hat seine eigene Hobel gekauft.,488a2f83.jpeg,0.574,0.5889,0.3935,0.2874,0.0826
+Look at her face, she has a flush!,Schau dir ihr Gesicht an, sie hat gerötet!,77e96961.jpeg,0.6696,0.7013,0.586,0.6157,0.379
+Look at her face, she has a flush!,Schau dir ihr Gesicht an, sie hat ein Straight Flush!,e4889d27.jpeg,0.5737,0.6007,0.2793,0.3029,0.0917
+Your gum doesn't look good!,Dein Zahnfleisch sieht nicht gut aus!,8ac8d99a.jpeg,0.634,0.6643,0.5296,0.5387,0.2902
+Your gum doesn't look good!,Dein Kaugummi sieht nicht gut aus!,cb6326ed.jpeg,0.6547,0.7188,0.4587,0.5719,0.3271
+It must be the spirits!,Das müssen Geister sein!,9f4d432f.jpeg,0.5575,0.5736,0.4908,0.4905,0.2406
+It must be the spirits!,Das müssen die Spirituosen sein!,bf89c490.jpeg,0.5616,0.5718,0.5194,0.493,0.243
+The soles were stinky.,Die Dorade roch unangenehm.,2c7ba1fd.jpeg,0.3471,0.3432,0.3855,0.3197,0.1022
+The soles were stinky.,Die Sohlen stanken.,ac7df394.jpeg,0.7255,0.7789,0.4527,0.4428,0.196
+A person with a yellow jacket is waiting for something.,Eine Person mit einer gelben Jacke wartet auf etwas.,c7d1e8b3.jpeg,0.8084,0.8884,0.5944,0.6116,0.374
+A person with a yellow jacket is waiting for something.,Eine Person mit einer gelben Weste wartet auf etwas.,41fe2d75.jpeg,0.7912,0.8545,0.6172,0.6032,0.3639
+I appear to have lost a couple of pounds.,Ich habe anscheinend ein paar Pfund verloren.,024779eb.jpeg,0.6199,0.6513,0.4849,0.4824,0.2327
+I appear to have lost a couple of pounds.,Ich glaube, ich habe ein paar Pfund verloren.,413aebc3.jpeg,0.593,0.6169,0.4033,0.3551,0.1261
+You really need to give the pipes a good clean every now and then.,Man sollte die Rohre gelegentlich wirklich gut reinigen.,deae3d1c.jpeg,0.5639,0.6015,0.4204,0.5119,0.262
+You really need to give the pipes a good clean every now and then.,Man sollte die Pfeifen gelegentlich mal richtig sauber machen.,aced3462.jpeg,0.5026,0.5205,0.3576,0.3522,0.1241
+This wedge is all rotten.,Dieser Keil ist ganz verfault.,d31ef202.jpeg,0.5827,0.6149,0.4616,0.5151,0.2653
+This wedge is all rotten.,Dieser Kartoffelspalt ist ganz verdorben.,c4a03333.jpeg,0.5463,0.5706,0.4286,0.454,0.2061
+His shoe just fell off in the field.,Sein Schuh ist gerade auf dem Feld abgefallen.,60f2ad42.jpeg,0.733,0.7732,0.5915,0.533,0.2841
+His shoe just fell off in the field.,Sein Huf ist gerade im Feld abgefallen.,25f73d6a.jpeg,0.597,0.6272,0.4421,0.4417,0.1951
+Give me his record, please.,Bitte geben Sie mir seine Akte.,7f61ac4f.jpeg,0.5017,0.5192,0.377,0.3743,0.1401
+Give me his record, please.,Gib mir bitte seine Schallplatte.,973a12ea.jpeg,0.5229,0.5388,0.4301,0.4124,0.1701
+That's a wonderful train, isn't it?,Das ist ein wunderschönes Zug, oder?,9e1a414c.jpeg,0.6772,0.7228,0.5266,0.5501,0.3026
+That's a wonderful train, isn't it?,Was für ein wunderschöner Zug, nicht wahr?,cc4316b3.jpeg,0.5991,0.6251,0.3513,0.3238,0.1049
+Have you seen the ruler?,Hast du den Lineal gesehen?,082e6875.jpeg,0.5145,0.545,0.3864,0.4876,0.2377
+Have you seen the ruler?,Haben Sie den Herrscher gesehen?,e4887243.jpeg,0.4981,0.5007,0.4779,0.3619,0.131
+Look under the hood!,Schau unter die Motorhaube!,076f318e.jpeg,0.5817,0.584,0.5725,0.4959,0.2459
+Look under the hood!,Schau unter die Haube!,4302100d.jpeg,0.5416,0.564,0.3514,0.3436,0.1181
+Subway? It's your call.,Subway? Es liegt an dir.,1e3b0ca8.jpeg,0.7417,0.7986,0.5593,0.5585,0.3119
+Subway? It's your call.,U-Bahn? Entscheiden Sie selbst.,570a6334.jpeg,0.4999,0.5072,0.466,0.4643,0.2156
+What is that sign? I've never seen it before.,Ich liebe dich.,e3229bf5.jpeg,0.2975,0.2404,0.6415,0.4074,0.166
+What is that sign? I've never seen it before.,Achtung, Überquerungsstelle für Militärfahrzeuge.,207966ae.jpeg,0.5628,0.5197,0.6821,0.6011,0.3613
+Look, he has a leg injury.,Schau, er hat eine Beinverletzung.,67de15f9.jpeg,0.7244,0.7787,0.3665,0.3898,0.1519
+Look, he has a leg injury.,Schau, er hat sich eine Beinverletzung zugezogen.,f98d9c9f.jpeg,0.7175,0.77,0.4993,0.4906,0.2407
+He is an experienced rider.,Er ist ein erfahrener Reiter.,6d077744.jpeg,0.6915,0.7474,0.4593,0.4909,0.241
+He is an experienced rider.,Er ist ein erfahrener Fahrer.,8f6ff93a.jpeg,0.644,0.7004,0.4383,0.5233,0.2739
+Last weekend, we went to the racetrack.,Letztes Wochenende waren wir auf der Rennstrecke.,86a567a8.jpeg,0.6863,0.743,0.4873,0.5341,0.2853
+Last weekend, we went to the racetrack.,Letztes Wochenende waren wir auf der Rennbahn.,c1ba9bc9.jpeg,0.6712,0.7365,0.4583,0.5538,0.3067
+The dock is made of wood and is relatively sturdy.,Die Ladestation ist aus Holz und relativ stabil.,527d027b.jpeg,0.5763,0.5932,0.5204,0.5496,0.3021
+The dock is made of wood and is relatively sturdy.,Der Steg ist aus Holz und wirkt relativ stabil.,4a366ec6.jpeg,0.7125,0.7414,0.658,0.7282,0.5303
+Why do I get the impression he really likes drills?,Ich habe den Eindruck, er mag Drillübungen wirklich gerne.,68c433ba.jpeg,0.5338,0.5549,0.3693,0.3581,0.1282
+Why do I get the impression he really likes drills?,Ich habe den Eindruck, er mag Bohrmaschinen wirklich gern.,912b8ee3.jpeg,0.5261,0.541,0.4311,0.395,0.1561
+He is sitting on the trunk.,Er sitzt auf dem Baumstamm.,335b3281.jpeg,0.6309,0.6546,0.4719,0.3856,0.1487
+He is sitting on the trunk.,Er sitzt auf dem Kofferraum.,a5f72754.jpeg,0.7168,0.7654,0.4206,0.4049,0.164
+The ball lasted a really long time, well worth the money!,Der Ball hat wirklich lange gedauert, das Geld war es wert!,20217a1a.jpeg,0.6746,0.7034,0.2944,0.2756,0.076
+The ball lasted a really long time, well worth the money!,Der Ball hat sehr lange gehalten, das Geld war es wert!,c623d53b.jpeg,0.6771,0.7313,0.428,0.4662,0.2174
+He took the lead.,Er ging voran.,b5c98a9e.jpeg,0.5525,0.586,0.3806,0.4417,0.1951
+He took the lead.,Er übernahm die Führung.,6f82a941.jpeg,0.5169,0.5486,0.396,0.5118,0.262
+Have you got any coke?,Hast du Cola?,264ae5e9.jpeg,0.489,0.4905,0.4825,0.4695,0.2204
+Have you got any coke?,Hast du Lines?,115bec66.jpeg,0.299,0.2855,0.3911,0.3833,0.147
+This dog's muzzle is weird.,Diese Hundemaske ist seltsam.,b7320652.jpeg,0.6519,0.6993,0.5401,0.651,0.4237
+This dog's muzzle is weird.,Dieser Hund hat eine seltsame Schnauze.,4fd8f02b.jpeg,0.6857,0.7313,0.5606,0.6039,0.3647
+Can you not hear the roar?,Kannst du das Brüllen nicht hören?,450cdf0d.jpeg,0.596,0.6423,0.4185,0.511,0.2611
+Can you not hear the roar?,Kannst du das Brüllen nicht hören?,7a2c2848.jpeg,0.5979,0.6423,0.3043,0.3892,0.1515
+Hand me the spade.,Gib mir den Pik.,acf5e2d2.jpeg,0.1596,0.1116,0.4259,0.4246,0.1803
+Hand me the spade.,Gib mir die Schaufel.,e82edf58.jpeg,0.5148,0.5197,0.4938,0.4825,0.2328
+He had a nice cold beer out on the deck.,Er hatte ein kühles Bier auf dem Deck.,06c95da3.jpeg,0.6637,0.6994,0.3746,0.3518,0.1238
+He had a nice cold beer out on the deck.,Er hatte ein kühles Bier auf der Terrasse.,83a1ed92.jpeg,0.6622,0.7057,0.3506,0.3732,0.1393
+I can't wait - it's my favourite show, you know!,Ich kann es kaum erwarten – es ist meine Lieblingsvorstellung, weißt du!,ff9d31cd.jpeg,0.5986,0.6266,0.3138,0.3131,0.0981
+I can't wait - it's my favourite show, you know!,Ich kann es kaum erwarten – es ist meine Lieblingssendung, weißt du!,2cb5fd44.jpeg,0.6544,0.697,0.3348,0.365,0.1332
+The vault is sealed now.,Das Grabmal ist jetzt geschlossen.,2f5bec21.jpeg,0.5748,0.5772,0.5535,0.3314,0.1099
+The vault is sealed now.,Der Safe ist jetzt geschlossen.,a5abe0e7.jpeg,0.6372,0.659,0.5821,0.6292,0.3959
+Put that in the basket.,Lege es in den Korb.,1ed01e54.jpeg,0.4236,0.4179,0.4512,0.455,0.2071
+Put that in the basket.,Lege das in den Korb.,97385ca1.jpeg,0.5679,0.5898,0.3923,0.353,0.1246
+I dropped the cap.,Ich habe die Kappe fallen lassen.,583f400d.jpeg,0.6256,0.6711,0.4561,0.5185,0.2688
+I dropped the cap.,Ich habe die Kappe fallen lassen.,c1f6e732.jpeg,0.6308,0.6711,0.4305,0.4487,0.2014
+I saw someone with a stick walking down the street.,Ich sah jemanden mit einem Stock die Straße entlanggehen.,63bebc68.jpeg,0.762,0.8171,0.6177,0.6182,0.3822
+I saw someone with a stick walking down the street.,Ich sah jemanden mit einem Stock auf der Straße gehen.,a510fc0f.jpeg,0.7419,0.8024,0.4974,0.4973,0.2473
+The bolt is broken, could you change it?,Der Riegel ist kaputt, könnten Sie ihn austauschen?,da99e9f2.jpeg,0.5502,0.5806,0.3658,0.4056,0.1645
+The bolt is broken, could you change it?,Der Bolzen ist kaputt, könnten Sie ihn austauschen?,83ef42b8.jpeg,0.6609,0.7073,0.4659,0.4879,0.2381
+When I moved to my new apartment, I found a box that had been left behind by the previous occupant.,Als ich in meine neue Wohnung zog, fand ich eine Schachtel, die der vorherige Mieter zurückgelassen hatte.,60bc860f.jpeg,0.6939,0.7423,0.3637,0.3829,0.1466
+When I moved to my new apartment, I found a box that had been left behind by the previous occupant.,Als ich in meine neue Wohnung zog, fand ich eine Kiste, die der vorherige Mieter zurückgelassen hatte.,68daa555.jpeg,0.691,0.742,0.4471,0.457,0.2088
+They are used to rowing.,Sie sind es gewohnt, zu rudern.,70a67d59.jpeg,0.5399,0.5575,0.482,0.5508,0.3034
+They are used to rowing.,Sie streiten sich ständig.,a43d02d6.jpeg,0.2473,0.2327,0.5419,0.223,0.0497
+That's a good swing!,Das ist ein guter Schwung!,a9156d52.jpeg,0.6201,0.6636,0.4672,0.5334,0.2845
+That's a good swing!,Das ist eine schöne Schaukel!,58b6768c.jpeg,0.5216,0.5294,0.4785,0.4235,0.1794
+He jumped over the fence.,Er sprang über den Zaun.,c038313d.jpeg,0.6972,0.7517,0.457,0.4764,0.2269
+He jumped over the fence.,Er sprang über den Sprung.,d23ee043.jpeg,0.5964,0.6194,0.5279,0.5791,0.3353
+Please, leave a note on the table.,Bitte lass einen Zettel auf dem Tisch liegen.,05a623f7.jpeg,0.5598,0.5748,0.4733,0.4176,0.1744
+Please, leave a note on the table.,Bitte lass einen Dollar auf dem Tisch liegen.,db6e6046.jpeg,0.5337,0.5117,0.6367,0.4623,0.2138
+We have a new pitcher.,Wir haben einen neuen Pitcher.,48d7df48.jpeg,0.7316,0.797,0.4287,0.4649,0.2161
+We have a new pitcher.,Wir haben eine neue Kanne.,0fd1864a.jpeg,0.6472,0.7051,0.4064,0.4904,0.2405
+One of the organs unfortunately isn't working properly.,Eines der Organe funktioniert leider nicht richtig.,e232b664.jpeg,0.6413,0.6988,0.4536,0.5536,0.3064
+One of the organs unfortunately isn't working properly.,Eines der Orgeln funktioniert leider nicht richtig.,76e8c66d.jpeg,0.5479,0.5527,0.5178,0.3969,0.1576
+It is renowned for its beautiful roses.,Es ist berühmt für seine wunderschönen Rosen.,798b2dc0.jpeg,0.7092,0.774,0.4343,0.4856,0.2358
+It is renowned for its beautiful roses.,Es ist berühmt für seine wunderschönen Rosetten.,f5e4c464.jpeg,0.6899,0.735,0.4186,0.4077,0.1662
+My husband loves squash!,Mein Mann liebt Squash!,b67c61e1.jpeg,0.6612,0.7101,0.48,0.5198,0.2702
+My husband loves squash!,Mein Mann liebt Kürbisse!,2ebc106e.jpeg,0.611,0.6408,0.4125,0.3877,0.1503
+They were shooting in the village down by the postoffice.,Sie haben im Dorf in der Nähe des Postamtes geschossen.,5bf09de0.jpeg,0.5977,0.6316,0.3974,0.4117,0.1695
+They were shooting in the village down by the postoffice.,Sie haben am Strand gedreht.,e086f883.jpeg,0.4141,0.3791,0.6271,0.4053,0.1643
+It needs a really good sweep.,Es muss richtig gut gefegt werden.,e6e67778.jpeg,0.562,0.5839,0.4523,0.4459,0.1988
+It needs a really good sweep.,Es muss gründlich gefegt werden.,199ebdef.jpeg,0.5302,0.5479,0.445,0.4549,0.2069
+We changed coaches.,Wir haben einen neuen Trainer.,b15f1703.jpeg,0.4772,0.4817,0.4423,0.3607,0.1301
+We changed coaches.,Wir haben Abteile gewechselt.,b88b9c53.png,0.5579,0.5909,0.3763,0.4264,0.1818
+The tiles are old and broken, they need to be changed.,Die Fliesen sind alt und kaputt, sie müssen ausgetauscht werden.,e53ec8b2.jpeg,0.7039,0.7538,0.5777,0.6292,0.3959
+The tiles are old and broken, they need to be changed.,Die Ziegel sind alt und kaputt, sie müssen ausgetauscht werden.,f7f8b88e.jpeg,0.6575,0.6838,0.5854,0.6044,0.3653
+Be careful, the iron is hot!,Vorsicht, das Eisen ist heiß!,8da55de2.jpeg,0.6389,0.6742,0.5026,0.5088,0.2589
+Be careful, the iron is hot!,Pass auf, das Bügeleisen ist heiß!,e3d8747e.jpeg,0.6483,0.6895,0.5089,0.5438,0.2957
+We have some left, but I'm going to buy a few more rolls just to be sure.,Wir haben noch etwas da, aber ich kaufe noch ein paar Rollen, nur für den Fall der Fälle.,e6f207a4.jpeg,0.6499,0.6859,0.3228,0.3316,0.11
+We have some left, but I'm going to buy a few more rolls just to be sure.,Wir haben noch ein paar übrig, aber ich kaufe noch ein paar Brötchen, nur für den Fall.,81c9adb9.jpeg,0.616,0.6455,0.4155,0.3835,0.1471
+Let me take a closer look at that skate.,Ich schaue mir diesen Schlittschuh mal genauer an.,df266432.jpeg,0.5441,0.5584,0.4668,0.4296,0.1845
+Let me take a closer look at that skate.,Lass mich diesen Rochen genauer ansehen.,dc59f028.jpeg,0.4763,0.4952,0.3339,0.3644,0.1328
+What a chicken!,Was für ein Huhn!,38758a2d.jpeg,0.6259,0.6547,0.5627,0.6747,0.4552
+What a chicken!,Was ein Angstvorrat!,fe92b00b.jpeg,0.3911,0.3953,0.3731,0.4847,0.2349
+Next to the main square or the little one?,Neben dem Hauptplatz oder dem kleinen Platz?,adb41049.jpeg,0.5435,0.5447,0.5387,0.5166,0.2668
+Next to the main square or the little one?,Neben dem großen Quadrat oder dem kleinen?,e1c09d57.jpeg,0.3622,0.3401,0.5309,0.3613,0.1306
+She knows how to handle a paddle.,Sie weiß, wie man ein Paddel handhabt.,c02f7d1a.jpeg,0.708,0.7513,0.5235,0.4842,0.2344
+She knows how to handle a paddle.,Sie weiß, wie man einen Schläger handhabt.,e98cf581.jpeg,0.6314,0.6753,0.438,0.4761,0.2267
+The man saw her duck.,Der Mann sah, wie sie sich duckte.,d397a90f.jpeg,0.6937,0.7427,0.4761,0.4747,0.2254
+The man saw her duck.,Der Mann sah ihre Ente.,ca287619.jpeg,0.7135,0.7695,0.4503,0.4616,0.213
+Look at the bay, it's beautiful!,Schau dir die Bucht an, sie ist wunderschön!,eb47f13a.jpeg,0.6348,0.6826,0.4943,0.5835,0.3404
+Look at the bay, it's beautiful!,Schau dir den Lorbeer an, er ist wunderschön!,fb133b23.jpeg,0.423,0.4212,0.4369,0.3592,0.129
+How many degrees? Two degrees!,Wie viele Grad? Zwei Grad!,494fe6e9.jpeg,0.6511,0.6919,0.4314,0.4306,0.1855
+How many degrees? Two degrees!,Zwei Diplome!,47cdb649.jpeg,0.4391,0.4006,0.628,0.4517,0.204
+Don't tell me, you've got a hive problem again?,Hast du schon wieder ein Problem mit einem Bienenstock?,4d718cc3.jpeg,0.4025,0.4081,0.3601,0.3623,0.1313
+Don't tell me, you've got a hive problem again?,Hast du schon wieder einen Nesselsucht-Ausbruch?,c977626d.jpeg,0.3534,0.3624,0.2595,0.3099,0.0961
+How did you get such a mark?,Wie hast du diesen Fleck bekommen?,40b0c994.jpeg,0.5204,0.5279,0.4571,0.3436,0.1181
+How did you get such a mark?,Wie hast du diese Note bekommen?,0c5443fc.jpeg,0.5222,0.549,0.4144,0.4978,0.2478
+Just a single tear, but it was enough.,Nur eine Träne, aber sie reichte aus.,b07cb134.jpeg,0.6977,0.7567,0.3416,0.407,0.1657
+Just a single tear, but it was enough.,Nur ein Riss, aber er reichte aus.,c80fe410.jpeg,0.5315,0.5436,0.3779,0.2805,0.0787
+By the way, the key tends to stick a little bit.,Der Schlüssel klemmt ein wenig.,ec88710c.jpeg,0.585,0.5952,0.5406,0.4808,0.2312
+By the way, the key tends to stick a little bit.,Der Knopf klemmt ein bisschen.,c23f7abf.jpeg,0.4996,0.5276,0.3337,0.4113,0.1692
+I did not expect you to be so smart!,Ich hätte nicht erwartet, dass du so schlau bist!,5c9ce195.jpeg,0.6318,0.6722,0.303,0.3503,0.1227
+I did not expect you to be so smart!,Ich hätte nicht gedacht, dass du so schlau bist!,cb64d54b.jpeg,0.5956,0.6292,0.3066,0.3411,0.1164
+Ow, that's far too hot!,Au das ist zu scharf!,84d215e5.jpeg,0.4749,0.4814,0.4193,0.3397,0.1154
+Ow, that's far too hot!,Oh das ist viel zu heiß!,5033f6e8.jpeg,0.5476,0.5694,0.3584,0.3397,0.1154
+Oh don't stress, it's just a draft.,Ach mach dir keine Sorgen, ist nur ein Zug.,bca445ea.jpeg,0.512,0.5291,0.3038,0.286,0.0818
+Oh don't stress, it's just a draft.,Keine Sorge es ist nur ein Entwurf.,d8db8c45.jpeg,0.5711,0.5862,0.4605,0.3689,0.1361
+The shell's got a crack in it.,Die Schale ist gesprungen.,9e56c574.jpeg,0.6109,0.6295,0.5635,0.6249,0.3905
+The shell's got a crack in it.,Die Schale hat einen Riss.,aa957a15.jpeg,0.6211,0.6612,0.3678,0.3975,0.158
+The carpet must have cost a fortune!,Der Teppich muss ein Vermögen gekostet haben!,59a4bae4.jpeg,0.7156,0.7839,0.5186,0.589,0.3469
+The carpet must have cost a fortune!,Der Teppich muss ein Vermögen gekostet haben!,97e8502f.jpeg,0.7008,0.7839,0.4657,0.5942,0.3531
+Do me a favour and clear out the tray for me, please.,Bitte mach den Korb sauber.,59b8c3ab.jpeg,0.4826,0.493,0.3656,0.2976,0.0886
+Do me a favour and clear out the tray for me, please.,Bitte räumen Sie mir das Tablett frei.,5c9da7a4.jpeg,0.5333,0.5506,0.3578,0.3142,0.0987
+The frame is made of wood.,Der Bilderrahmen ist aus Holz.,cc456922.jpeg,0.7103,0.7092,0.7124,0.6987,0.4881
+The frame is made of wood.,Das Fachwerk ist aus Holz.,9375bb9e.jpeg,0.5346,0.5062,0.6645,0.4675,0.2186
