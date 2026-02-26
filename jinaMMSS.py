@@ -120,7 +120,7 @@ class JinaAPIv4Scorer:
         }
 
 # --- Execution ---
-API_KEY = "jina_981e851b2dee47ba834256269776c26dF2quAX8oYUwN-8M7_jQapBtD-9As"
+API_KEY = ""
 scorer = JinaAPIv4Scorer(API_KEY)
 
 results = scorer.compute_mmss_advanced(
